@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteRule ^topic?$ suggestions.php
+
+RewriteRule ^home?$ index.php
+
+
+RewriteRule ^create?$ create2.php
+
+RewriteRule ^superadmin?$ indexadmin.php
+
+RewriteRule ^adminedit?$ loginadmin.php

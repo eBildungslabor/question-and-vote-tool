@@ -1,0 +1,124 @@
+**************************************************************************************************************
+*                                                                                                            *
+*  Class name: class.Language.php                                                                            *
+*  Author: Deyby Vasquez                                                                                     *
+*  E-mail: edevd80@gmail.com                                                                                 *
+*  Version: 1.0                                                                                              *
+*  Licence: MIT Licence                                                                                      *
+*  Web site: http://loquenecesita.com/                                                                       *
+*                                                                                                            *
+**************************************************************************************************************
+
+**************************************************************************************************************
+WHAT DOES class.Language.php DO?
+**************************************************************************************************************
+Allows to implement multiple languages in a Web site developed in PHP language.
+
+This class detects the visiting client language and displays the content in the correct language, if the language is not supported it displays the content in a default language.
+
+It's easy to implement a selecting language system e.g. a form, in order that users can select the language.
+
+Just configure the languages into an associative array file.
+
+**************************************************************************************************************
+INSTALLATION
+**************************************************************************************************************
+
+1. Unzip the files and upload the unziped files to the root directory.
+2. That's it just test it e.g:
+   http://localhost/nameOfUnzippedFile or http://yourdomain/nameOfUnzippedFile
+
+**************************************************************************************************************
+CREATING YOUR OWN PAGES FROM 0
+**************************************************************************************************************
+
+1. Unzip the files and upload the class.language.php file to the root directory.
+2. Create the associative array with the content to the page for each language you require e.g:
+   
+   <?php
+
+	 /* English language configuration */
+
+	 $lang = array (
+
+	 	/* title page */
+	 	'title' => "Example page in english",
+
+	 	/* Content items */
+		'welcome' => "Hello world",
+	  	'language' => "The language page is in English",
+		'en' => "English",
+		'es' => "Spanish",
+	        'fr' => "French",
+	 );
+   ?>
+
+3. Save it with two language first letters and conf extension e.g. en.conf into a languages directory.
+4. Set a default language variable e.g $DEFAULT_LANGUAGE = 'en'; and languages directory path e.g
+   $LANGUAGE_DIR = '../languages'; into a configuration file or in the pages. 
+5. Include the class in the pages that you're going to display multiple languages e.g:
+  
+   require_once ("class.languages.php");
+
+6. instantiating the class and apply the getLanguage method e.g:
+
+   $language = new Language();
+   $lang = $language->getLanguage(@$_POST['lang']);
+
+7. That's it just you have to display the content in your pages e.g:
+
+   echo $lang['welcome'];
+
+***************************************************************************************************************
+CREATING SELECTING SYSTEM (Optional) FROM 0
+***************************************************************************************************************
+
+1. Create a system e.g: A form
+
+   <form name="language" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+	<select onchange = "document.language.submit()" name="lang">
+    	  <option selected="selected"><?php echo $lang['select-language']; ?></option>
+          <option value="en"><?php echo $lang['en']; ?></option>
+          <option value="es"><?php echo $lang['es']; ?></option>
+          <option value="fr"><?php echo $lang['fr']; ?></option>
+        </select>
+   </form>
+
+2. You can use both methods POST or GET.
+3. Be assure to set a variable name for the select item of the form e.g:
+   
+   <select onchange = "document.language.submit()" name="lang">
+
+4. The parameter that you pass to getLanguage method varies depending on method form e.g:
+
+   If you use method="post" set $lang = $language->getLanguage(@$_POST['lang']);
+   If you use method="get" set $lang = $language->getLanguage(@$_GET['lang']);	
+
+5. That's it ...!
+
+***************************************************************************************************************
+MORE EXAMPLES
+***************************************************************************************************************
+
+class.Language.php with Smarty you can access to a Spanish video and you can download the example code for free 
+from:
+http://loquenecesita.com/2008/12/multilenguaje-con-php-y-smarty/ 
+
+class.Language.php using a selecting language system, Spanish video and example code from:
+http://loquenecesita.com/2008/12/video-2-multilenguaje-con-php-usando-la-clase-classlanguagephp/
+
+class.Language.php simple configuration, Spanish video and example code from:
+http://loquenecesita.com/2008/11/multilenguaje-con-php-usando-la-clase-classlanguagephp/ 
+
+***************************************************************************************************************
+NOTE
+***************************************************************************************************************
+
+All examples acompaning this class must be uploaded to the root directory.
+
+***************************************************************************************************************
+THANKS FOR USING IT
+***************************************************************************************************************		
+
+
+

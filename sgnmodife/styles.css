@@ -1,0 +1,218 @@
+
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	font-size:13%;
+	color:#eee;
+	font-family:Arial, Helvetica, sans-serif;
+	font-family:Corbel,'Myriad Pro',Arial, Helvetica, sans-serif;
+	position: absolute;
+	margin-top: 12%;
+	margin:auto;
+	width:70%;
+	background:white;
+}
+
+#page{
+	width:160%;
+	margin:2.5% 3%;
+	min-width:350px;
+	position: relative;
+    top: 10%;
+    left: 4%;
+}
+
+/* div which content name  and details of the qv session  */
+#heading{
+	background-color:#646569;
+	margin-bottom:40px;
+	padding:4%;
+	width:120%;
+}
+
+h1{
+	margin-top: 0.001%;
+	font-size:29px;
+	font-weight:normal;
+	position:relative;
+}
+/* display you can ask your questions... 
+   margin: 15px 60px 75px 80px; 
+
+    top margin is 15px
+    right margin is 60px
+    bottom margin is 75px
+    left margin is 80px
+
+*/
+ i{
+	color:#CCCCCC;
+    margin: 25px 8px 75px 7px; 
+	font-size:18px;
+	line-height:32px;
+	position:absolute;
+	right:0;
+}
+
+ul.suggestions{	list-style:none;}
+
+/* suggestions full block */
+.suggestions li{
+	background-color:#646569;
+	padding:8px;
+	margin-bottom:10px;
+	position:relative;
+	font-size:18px;
+	width:120%;
+	overflow-x:hidden;
+	word-wrap:break-word;
+}
+
+/* suggestion background input */
+#suggest{
+	background-color:#646569;
+	padding:22px;
+	margin:60px 0 0;
+	width:120%;
+	height: 150px;
+}
+
+.rounded,
+#suggest,
+.suggestions li{
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-bottomright:10px;
+
+	-webkit-border-top-left-radius:12px;
+	-webkit-border-bottom-right-radius:12px;
+	
+	border-top-left-radius:12px;
+	border-bottom-right-radius:12px;
+}
+#textarea{ resize:none;}
+/* suggestion input content  */
+#suggestionText{
+	background-color:#F0F0F0;
+	border:1px solid #333333;
+	color:#888;
+	display:block;
+	float:left;
+	font-family:Corbel,'Myriad Pro',Arial,Helvetica,sans-serif;
+	font-size:18px;
+	margin-right:20px;
+	margin-top:4px;
+	padding:2px 0 2px 14px;
+	text-shadow:1px 1px 0 white;
+	height:80px;
+	width:80%;
+	outline:none;
+
+}
+
+#submitSuggestion{
+
+	width:95px;
+	height:31px;
+	background:url('img/submit_button.png') no-repeat;
+	text-transform:uppercase;
+	text-indent:-9999px;
+	overflow:hidden;
+	border:none;
+	cursor:pointer;
+	display:block;
+	margin:20px auto;
+}
+
+#submitSuggestion:hover{
+	background-position:left -31px;
+}
+
+form.working #submitSuggestion{
+	background-position:left bottom;
+}
+
+.suggestions .text{
+	line-height:1.5;
+	padding:0 50px;
+
+}
+
+/* rate value  */
+.suggestions .rating{
+	bottom:8px;
+	color:#c4da5a;
+	font-family:Arial,Helvetica,sans-serif;
+	font-size:18px;
+	position:absolute;
+
+	left:42px;
+	top :8px;
+}
+
+.vote{
+	float:left;
+}
+
+.vote span{
+	background:url('img/vote_arrows.png') no-repeat;
+	float:left;
+	height:26px;
+	margin-right:4px;
+	width:26px;
+	cursor:pointer;
+}
+
+.vote.inactive span{
+	opacity:0.5;
+	filter: alpha(opacity = 50);
+	cursor:default;
+}
+
+.vote .down	{ background-position:right top;}
+.vote.active .up:hover		{	background-position:left bottom;}
+.vote.active .down:hover	{	background-position:right bottom;}
+
+
+/* Neded to put credit Project */
+
+p.createdBy{
+	font-size:9px;
+	font-weight:normal;
+	margin:50px;
+	text-align:center;
+	text-shadow:none;
+	color : black;
+}
+
+a, a:visited {
+	text-decoration:none;
+	outline:none;
+	border-bottom:1px dotted #97cae6;
+	color:#97cae6;
+}
+
+a:hover{
+	border-bottom:1px dashed transparent;
+}
+
+
+#container {
+	width:10%;
+	background:white; 
+	padding: 3%;
+	border-radius :12px; 
+	border-collapse:collapse;
+	margin:.5% 11%;
+	min-width:400px;
+
+	position: absolute;
+    top: 90%;
+    left: 20%;
+
+}
+
+
+
